@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello React</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    
+    //First Method
+    var helloWorld = React.createElement("h1", {}, 'Hello World!');
+
+    //Second Method
+    class HelloWorld extends React.Component {
+        render () {
+            return (
+                    <h1>Hello World!</h1>
+                )
+        }
+    }
+
+    //Third Method (Pure Component)
+    class HelloWorldPure extends React.PureComponent {  
+        render() {
+            return <h1>Hello World!</h1>
+        }
+    }
+
+    //Fourth Method (Functional Component)
+    const HelloWorldFunctional = () => <h1>Hello World!</h1>;
+
+    const container = React.createElement("div", {}, helloWorld, <HelloWorld />, <HelloWorldPure />, <HelloWorldFunctional /> );  
+
+    ReactDOM.render(container, document.getElementById('root'))
+</script>
+
+</html>
