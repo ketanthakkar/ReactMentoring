@@ -1,16 +1,29 @@
-var express = require('express');
-var app = express();
-const port = 4000
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
 
-app.use(express.static('src'))
+//First Method
+var helloWorld = React.createElement("h1", {className: "redText"}, 'Hello World!');
 
-//Not required as it's index.html
-// app.get('/', function(req, res) {
-//   res.sendFile(path.join(__dirname + '/src/index.html'));
-// });
+//Second Method
+class HelloWorld extends React.Component {
+    render () {
+        return (
+                <h1 className="greenText">Hello World!</h1>
+            )
+    }
+}
 
-app.listen(port, function () {
-  console.log(`Example app listening on port ${port}!`);
-})
+//Third Method (Pure Component)
+class HelloWorldPure extends React.PureComponent {  
+    render() {
+        return <h1 className="redText">Hello World!</h1>
+    }
+}
 
-export function add(a,b) { return a+b; }
+//Fourth Method (Functional Component)
+const HelloWorldFunctional = () => <h1 className="greenText">Hello World!</h1>;
+
+const container = React.createElement("div", {}, helloWorld, <HelloWorld />, <HelloWorldPure />, <HelloWorldFunctional /> );  
+
+ReactDOM.render(container, document.getElementById('root'))
