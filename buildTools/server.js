@@ -4,7 +4,7 @@ import open from 'open';
 var app = express();
 const port = 4000;
 
-app.use(express.static('src'));
+app.use(express.static('dist'));
 
 //Not required as it's index.html
 // app.get('/', function(req, res) {
