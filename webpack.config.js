@@ -1,32 +1,75 @@
-const webpack = require('webpack');
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-module.exports = {
-  devtool: 'source-map',
-  context: path.join(__dirname, "src"),
-  entry: "./",
-  mode: "development",
-  resolve: {
-    extensions: [".js", ".jsx"]
-  },
-  module: {
-    rules: [
-    {
-      test: /\.js$/,
-      loader: "babel-loader",
-      exclude: /node_modules/,
+module.exports = function (env, options) {
+  const isProduction = options.mode === "production";
+
+  const config = {
+    context: path.join(__dirname, "src"),
+    entry: "./",
+    mode: isProduction ? "production" : "development",
+    devtool: isProduction ? "none" : "source-map",
+    
+    resolve: {
+      extensions: [".js", ".jsx"]
     },
-    {
-      test: /\.css$/,
-      use: ['style-loader','css-loader']
+
+    optimization: isProduction ? {
+      minimizer: [
+        new UglifyJsPlugin({
+          cache: true,
+          parallel: true,
+          sourceMap: true
+        }),
+        new OptimizeCSSAssetsPlugin({})
+      ]
+    } : {},
+
+    module: {
+      rules: [
+      {
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
+      }
+      ]
+    },
+
+  plugins: [
+      new HtmlWebpackPlugin({
+        title: "ReactJS App",
+        hash: true,        
+        minify: isProduction ? {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true
+        } : {} ,
+        template: path.resolve(__dirname, "./src/index.html")
+      }),
+      new MiniCssExtractPlugin({
+        filename: "[name].css",
+        chunkFilename: "[id].css"
+      })
+    ],
+
+    devServer: {
+      contentBase: "./dist"
     }
-  ]
-},
-plugins: [
-    new HtmlWebpackPlugin({ template: path.resolve(__dirname, "./src/index.html") }),
-    new ExtractTextPlugin("[name].css"),
-    new webpack.HotModuleReplacementPlugin()
-    ]
+  };
+
+  return config;
 };

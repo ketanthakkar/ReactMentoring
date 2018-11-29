@@ -6,7 +6,7 @@ const port = 4000;
 
 app.use(express.static('dist'));
 
-//Not required as it's index.html
+//Not required as it's index.html. Keep it for future refrence.
 // app.get('/', function(req, res) {
 //   res.sendFile(path.join(__dirname + '/src/index.html'));
 // });

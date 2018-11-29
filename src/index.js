@@ -27,3 +27,5 @@ const HelloWorldFunctional = () => <h1 className="greenText">Hello World!</h1>;
 const container = React.createElement("div", {}, helloWorld, <HelloWorld />, <HelloWorldPure />, <HelloWorldFunctional /> );  
 
 ReactDOM.render(container, document.getElementById('root'))
+
+export function add(a,b) { return a+b; }

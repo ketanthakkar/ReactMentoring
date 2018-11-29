@@ -1,9 +1,5 @@
-//import {add} from './index';
+import {add} from './index';
 
-// test('1 + 1 to equal 2', () => {
-//   expect(add(1,1)).toBe(2);
-// });
-
-test("", () => {
-  expect("")
+test('Check equal to result', () => {
+  expect(add(1,1)).toBe(2);
 });
