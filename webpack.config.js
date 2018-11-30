@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = function (env, options) {
-  const isProduction = options.mode === "production";
+  const isProduction = env === "prod";
 
   const config = {
     context: path.join(__dirname, "src"),
@@ -31,7 +31,7 @@ module.exports = function (env, options) {
     module: {
       rules: [
       {
-        test: /\.js$/,
+        test: /\.js|jsx$/,
         loader: "babel-loader",
         exclude: /node_modules/,
       },
