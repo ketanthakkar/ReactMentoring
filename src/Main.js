@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
+import Filter from './components/Filter';
+import jsonResponse from './data/MovieData.js';
 
 class Main extends Component {
     render() {
         return (
-            <div>
+            <div className="main">
                 <Header />
-                <Content />
+                <Filter />
+                <Content movies={ jsonResponse } />
                 <Footer />
             </div>
         );

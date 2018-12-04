@@ -1,9 +1,74 @@
-.redText {
-    color: red;
-    text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.greenText {
-    color: green;
-    text-align: center;
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.netflixText {
+    color: #F65262;
+    width: 80%
+}
+
+.whiteText {
+    color: white;
+}
+
+.header-section {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.title-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.search-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.search-section > * {
+    padding: 10px 0;
+}
+
+.footer-section {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #F65262;
+}
+
+.search-container button:last-of-type {
+    padding: 5px 20px;
 }
