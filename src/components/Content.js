@@ -5,11 +5,12 @@ const Content = (props) => {
     const movies = props.movies.data;
 
     return movies.length > 0 ? (
-        movies.map(movie => {
-            return (
-                <MovieItem movieitem={movie} />
-            );
-        })
+        <div className="moviedata-container"> {
+            movies.map(movie => {
+                return (<MovieItem movieitem={movie} />);
+            })
+        }
+        </div>
         ) : ( <h2>No films found</h2> )
 }
 

@@ -6,12 +6,13 @@ const Search = () => {
             <h4 className="whiteText">FIND YOUR MOVIE</h4>
             <input type="text" placeholder="Enter title" className="whiteText"></input>
             <div className="search-container">
-                <label className="whiteText">SEARCH BY</label>
-                <button className="whiteText">TITLE</button>
-                <button className="whiteText">GENRE</button>
-                <div>
-                    <button className="whiteText">SEARCH</button>
+                <div className="search-selection">
+                    <label className="whiteText">SEARCH BY</label>
+                    <button className="whiteText">TITLE</button>
+                    <button className="whiteText">GENRE</button>
                 </div>
+                <button className="whiteText">SEARCH</button>
+                
             </div>
         </div>
     )

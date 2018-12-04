@@ -45,9 +45,9 @@ body {
 }
 
 .footer-section {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -55,6 +55,10 @@ body {
 .search-container {
     display: flex;
     justify-content: space-between;
+}
+
+.search-selection {
+    padding: 0 10px;
 }
 
 .content-container {
@@ -69,6 +73,19 @@ button {
     background-color: #F65262;
 }
 
-.search-container button:last-of-type {
-    padding: 5px 20px;
+.moviedata-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movieitem-container {
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.movieImg {
+    max-width: 250px;
 }
