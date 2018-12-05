@@ -2,7 +2,6 @@ import React from 'react';
 import Title from './Title';
 import Footer from './Footer';
 import Content from './Content';
-import Filter from './Filter';
 
 const Movie = (props) => {
     const movie = props.movies.data;

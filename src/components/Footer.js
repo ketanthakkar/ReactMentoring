@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="footer-section">
-      <span className="netflixText">netflixroulette</span>
+      <span className="netflix-text">netflixroulette</span>
     </div>
   )
 }

@@ -15,14 +15,14 @@ body {
     height: 100%;
 }
 
-.netflixText {
+.netflix-text {
     color: #F65262;
     width: 90%;
     display: block;
     margin: 0 auto;
 }
 
-.whiteText {
+.white-text {
     color: white;
 }
 
