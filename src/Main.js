@@ -4,6 +4,7 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import Filter from './components/Filter';
 import jsonResponse from './data/MovieData.js';
+import Movie from './components/Movie';
 
 class Main extends Component {
     render() {
@@ -13,6 +14,8 @@ class Main extends Component {
                 <Filter />
                 <Content movies={ jsonResponse } />
                 <Footer />
+
+                {/* Movie Detail page <Movie movies={ jsonResponse } /> */}
             </div>
         );
     }

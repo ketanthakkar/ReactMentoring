@@ -2,24 +2,29 @@ import React from 'react';
 import Title from './Title';
 import Footer from './Footer';
 import Content from './Content';
+import Filter from './Filter';
 
-const Movie = () => {
+const Movie = (props) => {
+    const movie = props.movies.data;
     return (
         <div className="movie-container">
-            <Title />
+            <div className="header-section">
+                <Title />
+            </div>
             <div className="movie-poster">
-                <img />
+                <img className="movie-img" src={movie[0].poster_path} alt={movie[0].tagline} />
                 <div className="movie-detail">
-                    <span className="movie-title"></span>
-                    <span className="movie-genres"></span>
+                    <span className="movie-title">{movie[0].title}</span>
+                    <span className="movie-genres">{movie[0].genres.join(" & ")}</span>
                     <div>
-                        <span className="movie-year"></span>
-                        <span className="movie-length"></span>
+                        <span className="movie-year">{movie[0].release_date}</span>
+                        <span className="movie-length">{`${movie[0].runtime} min`}</span>
                     </div>
-                    <p className="movie-description"></p>
+                    <p className="movie-description">{movie[0].overview}</p>
                 </div>    
             </div>
-            <Content />
+            <Filter />
+            <Content movies={ props.movies } />
             <Footer />
         </div>
     )

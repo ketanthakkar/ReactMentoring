@@ -4,7 +4,7 @@ const Search = () => {
     return (
         <div className="search-section">
             <h4 className="whiteText">FIND YOUR MOVIE</h4>
-            <input type="text" placeholder="Enter title" className="whiteText"></input>
+            <input type="text" placeholder="Enter title" className="whiteText search-title"></input>
             <div className="search-container">
                 <div className="search-selection">
                     <label className="whiteText">SEARCH BY</label>
