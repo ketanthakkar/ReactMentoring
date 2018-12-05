@@ -131,6 +131,9 @@ button {
     font-size: 13px;
 }
 
+.nofilm-error {
+    margin: 0 auto;
+}
 
 /* Movie Detail Screen */
 

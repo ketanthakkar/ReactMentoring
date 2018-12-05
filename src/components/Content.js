@@ -3,15 +3,19 @@ import MovieItem from './MovieItem';
 
 const Content = (props) => {
     const movies = props.movies.data;
+    
+    if(movies == null || movies.length <= 0) {
+        throw new Error('No Movies Found!');
+    }
 
-    return movies.length > 0 ? (
+    return (
         <div className="moviedata-container"> {
             movies.map(movie => {
                 return (<MovieItem movieitem={movie} />);
             })
         }
         </div>
-        ) : ( <h2>No films found</h2> )
+        )
 }
 
 export default Content;
