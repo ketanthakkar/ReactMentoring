@@ -17,7 +17,9 @@ body {
 
 .netflixText {
     color: #F65262;
-    width: 80%
+    width: 90%;
+    display: block;
+    margin: 0 auto;
 }
 
 .whiteText {
@@ -29,9 +31,8 @@ body {
 }
 
 .title-section {
-    width: 80%;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .search-section {
@@ -47,8 +48,6 @@ body {
 .footer-section {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
@@ -144,8 +143,8 @@ button {
 }
 
 .movie-img {
-    max-width: 450px;
-    max-height: 450px;
+    max-width: 400px;
+    max-height: 400px;
     padding: 50px 0;
 }
 

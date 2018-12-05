@@ -23,7 +23,6 @@ const Movie = (props) => {
                     <p className="movie-description">{movie[0].overview}</p>
                 </div>    
             </div>
-            <Filter />
             <Content movies={ props.movies } />
             <Footer />
         </div>

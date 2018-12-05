@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Filter = () => {
+const Filter = (props) => {
+    const records = props.moviecount;
+
     return (
         <div className="filter-container">
-            <span className="results">10 movies found</span>
+            <span className="results">{records} movies found</span>
             <div className="sort-detail">
                 <span>Sort by</span>
                 <span>release date</span>
