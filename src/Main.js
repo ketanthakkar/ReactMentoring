@@ -3,23 +3,37 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import ErrorBoundary from './error/ErrorBoundary';
-import jsonResponse from './data/MovieData.js';
 import Movie from './components/Movie';
 import PropTypes from 'prop-types';
 
 class Main extends Component {
-    state = { movieData: jsonResponse, }
+    constructor(props) {
+        super(props);
+
+        this.state = { 
+            movieData: [], 
+        }
+    }
+    
+    componentDidMount() {
+        fetch(`http://react-cdp-api.herokuapp.com/movies`)
+        .then(response => response.json())
+        .then(result => this.setState({ movieData: result }));
+    }
 
     render() {
-        return (
-            <div className="main">
-                <Header />
-                <ErrorBoundary>
-                    <Content movies={ this.state.movieData } />
-                </ErrorBoundary>
+        const {movieData} = this.state;
+        
+        return ( 
+            <div className="main"> 
+                <Header />  
+                { movieData.data && 
+                    <ErrorBoundary>
+                        <Content movies={ movieData } />
+                    </ErrorBoundary> 
+                }
                 <Footer />
-
-                {/* Movie Detail page <Movie movies={ jsonResponse } /> */}
+                {/* Movie Detail page <Movie movies={ movieData } /> */}
             </div>
         );
     }

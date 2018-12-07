@@ -2,7 +2,7 @@ import React from 'react';
 
 const Search = () => {
     return (
-        <div className="search-section">
+        <section className="search-section">
             <h4 className="white-text">FIND YOUR MOVIE</h4>
             <input type="text" placeholder="Enter title" className="white-text search-title"></input>
             <div className="search-container">
@@ -13,7 +13,7 @@ const Search = () => {
                 </div>
                 <button className="white-text">SEARCH</button>
             </div>
-        </div>
+        </section>
     )
 }
 

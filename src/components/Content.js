@@ -1,7 +1,6 @@
 import React from 'react';
 import Filter from './Filter';
 import MovieItem from './MovieItem';
-import PropTypes from 'prop-types';
 
 const Content = (props) => {
     const movies = props.movies.data;
@@ -21,10 +20,5 @@ const Content = (props) => {
         </React.Fragment>
     )
 }
-
-Content.propTypes = {
-    movieCount: PropTypes.number,
-    movieItem: PropTypes.object
-};
 
 export default Content;

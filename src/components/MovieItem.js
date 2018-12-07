@@ -1,8 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const MovieItem = (props) => {
-    const movieItem = props.movieItem;
-
+const MovieItem = ({movieItem}) => {
     return (
         <section className="movieitem-container">
             <figure>
@@ -16,5 +15,9 @@ const MovieItem = (props) => {
         </section>
     )
 }
+
+MovieItem.propTypes = {
+    movieItem: PropTypes.object
+};
 
 export default MovieItem;
