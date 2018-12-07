@@ -2,13 +2,11 @@ import React from 'react';
 import Title from './Title';
 import Search from './Search';
 
-const Header = () => {
-    return (
-        <div className="header-section">
+const Header = () => (
+        <header className="header-section">
             <Title />
             <Search />
-        </div>
-    )
-}
+        </header>
+)
 
 export default Header;

@@ -6,11 +6,11 @@ import Content from './Content';
 const Movie = (props) => {
     const movie = props.movies.data;
     return (
-        <div className="movie-container">
-            <div className="header-section">
+        <article className="movie-container">
+            <header className="header-section">
                 <Title />
-            </div>
-            <div className="movie-poster">
+            </header>
+            <section className="movie-poster">
                 <img className="movie-img" src={movie[0].poster_path} alt={movie[0].tagline} />
                 <div className="movie-detail">
                     <span className="movie-title">{movie[0].title}</span>
@@ -21,10 +21,10 @@ const Movie = (props) => {
                     </div>
                     <p className="movie-description">{movie[0].overview}</p>
                 </div>    
-            </div>
+            </section>
             <Content movies={ props.movies } />
             <Footer />
-        </div>
+        </article>
     )
 }
 

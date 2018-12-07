@@ -12,7 +12,6 @@ const Search = () => {
                     <button className="white-text">GENRE</button>
                 </div>
                 <button className="white-text">SEARCH</button>
-                
             </div>
         </div>
     )

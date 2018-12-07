@@ -111,7 +111,7 @@ button {
     padding: 20px 0;
 }
 
-.movieitem-container > div {
+.movieitem-container > figure {
     width: 300px;
     margin: 0 auto;
     text-align: left;

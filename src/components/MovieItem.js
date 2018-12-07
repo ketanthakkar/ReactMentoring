@@ -1,19 +1,19 @@
 import React from 'react';
 
 const MovieItem = (props) => {
-    const movieitem = props.movieitem;
+    const movieItem = props.movieItem;
 
     return (
-        <div className="movieitem-container">
-            <div>
-                <img className="movieitem-img" src={movieitem.poster_path} alt={movieitem.tagline}/>
-                <div className="movieitem-detail">
-                    <span>{movieitem.title}</span>
-                    <span className="movieitem-year">{movieitem.release_date}</span>
-                </div>
-                <span className="movieitem-genres">{movieitem.genres.join(" & ")}</span>
-            </div>
-        </div>
+        <section className="movieitem-container">
+            <figure>
+                <img className="movieitem-img" src={movieItem.poster_path} alt={movieItem.tagline}/>
+                <figcaption className="movieitem-detail">
+                    <span>{movieItem.title}</span>
+                    <span className="movieitem-year">{movieItem.release_date}</span>
+                </figcaption>
+                <span className="movieitem-genres">{movieItem.genres.join(" & ")}</span>
+            </figure>
+        </section>
     )
 }
 
