@@ -14,7 +14,7 @@ const Content = (props) => {
         <React.Fragment>
             <Filter movieCount={records} />
             <main className="moviedata-container"> {
-                movies.map(movie => <MovieItem movieItem={movie} />)
+                movies.map(movie => <MovieItem key={movie.id} movieItem={movie} />)
             }
             </main>
         </React.Fragment>

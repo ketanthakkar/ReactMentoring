@@ -7,7 +7,7 @@ const MovieItem = ({movieItem}) => {
             <figure>
                 <img className="movieitem-img" src={movieItem.poster_path} alt={movieItem.tagline}/>
                 <figcaption className="movieitem-detail">
-                    <span>{movieItem.title}</span>
+                    <span>{movieItem.title.toUpperCase()}</span>
                     <span className="movieitem-year">{movieItem.release_date}</span>
                 </figcaption>
                 <span className="movieitem-genres">{movieItem.genres.join(" & ")}</span>

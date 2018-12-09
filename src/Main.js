@@ -11,7 +11,7 @@ class Main extends Component {
         super(props);
 
         this.state = { 
-            movieData: [], 
+            movieData: [],
         }
     }
     
@@ -25,7 +25,7 @@ class Main extends Component {
         const {movieData} = this.state;
         
         return ( 
-            <div className="main"> 
+            <div className="main">
                 <Header />  
                 { movieData.data && 
                     <ErrorBoundary>
@@ -38,9 +38,5 @@ class Main extends Component {
         );
     }
 }
-
-Main.propTypes = {
-    movies: PropTypes.object
-};
 
 export default Main;
