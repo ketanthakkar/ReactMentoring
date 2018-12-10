@@ -41,8 +41,8 @@ module.exports = function (env, options) {
           MiniCssExtractPlugin.loader,
           "css-loader"
         ]
-      }
-      ]
+      },
+      ],
     },
 
   plugins: [
