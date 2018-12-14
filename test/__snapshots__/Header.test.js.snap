@@ -57,11 +57,13 @@ ReactWrapper {
               </label>
               <button
                 class="white-text"
+                id="title-btn"
               >
                 TITLE
               </button>
               <button
                 class="white-text"
+                id="genre-btn"
               >
                 GENRE
               </button>
@@ -169,11 +171,13 @@ ReactWrapper {
                   </label>
                   <button
                     class="white-text"
+                    id="title-btn"
                   >
                     TITLE
                   </button>
                   <button
                     class="white-text"
+                    id="genre-btn"
                   >
                     GENRE
                   </button>
@@ -212,11 +216,13 @@ ReactWrapper {
                     </label>
                     <button
                       className="white-text"
+                      id="title-btn"
                     >
                       TITLE
                     </button>
                     <button
                       className="white-text"
+                      id="genre-btn"
                     >
                       GENRE
                     </button>
@@ -283,11 +289,13 @@ ReactWrapper {
                     </label>
                     <button
                       class="white-text"
+                      id="title-btn"
                     >
                       TITLE
                     </button>
                     <button
                       class="white-text"
+                      id="genre-btn"
                     >
                       GENRE
                     </button>
@@ -312,11 +320,13 @@ ReactWrapper {
                       </label>
                       <button
                         className="white-text"
+                        id="title-btn"
                       >
                         TITLE
                       </button>
                       <button
                         className="white-text"
+                        id="genre-btn"
                       >
                         GENRE
                       </button>
@@ -342,11 +352,13 @@ ReactWrapper {
                       </label>
                       <button
                         class="white-text"
+                        id="title-btn"
                       >
                         TITLE
                       </button>
                       <button
                         class="white-text"
+                        id="genre-btn"
                       >
                         GENRE
                       </button>
@@ -362,11 +374,13 @@ ReactWrapper {
                         </label>,
                         <button
                           className="white-text"
+                          id="title-btn"
                         >
                           TITLE
                         </button>,
                         <button
                           className="white-text"
+                          id="genre-btn"
                         >
                           GENRE
                         </button>,
@@ -396,6 +410,7 @@ ReactWrapper {
                       Object {
                         "instance": <button
                           class="white-text"
+                          id="title-btn"
                         >
                           TITLE
                         </button>,
@@ -404,6 +419,7 @@ ReactWrapper {
                         "props": Object {
                           "children": "TITLE",
                           "className": "white-text",
+                          "id": "title-btn",
                         },
                         "ref": null,
                         "rendered": Array [
@@ -414,6 +430,7 @@ ReactWrapper {
                       Object {
                         "instance": <button
                           class="white-text"
+                          id="genre-btn"
                         >
                           GENRE
                         </button>,
@@ -422,6 +439,7 @@ ReactWrapper {
                         "props": Object {
                           "children": "GENRE",
                           "className": "white-text",
+                          "id": "genre-btn",
                         },
                         "ref": null,
                         "rendered": Array [
@@ -509,11 +527,13 @@ ReactWrapper {
                 </label>
                 <button
                   class="white-text"
+                  id="title-btn"
                 >
                   TITLE
                 </button>
                 <button
                   class="white-text"
+                  id="genre-btn"
                 >
                   GENRE
                 </button>
@@ -621,11 +641,13 @@ ReactWrapper {
                     </label>
                     <button
                       class="white-text"
+                      id="title-btn"
                     >
                       TITLE
                     </button>
                     <button
                       class="white-text"
+                      id="genre-btn"
                     >
                       GENRE
                     </button>
@@ -664,11 +686,13 @@ ReactWrapper {
                       </label>
                       <button
                         className="white-text"
+                        id="title-btn"
                       >
                         TITLE
                       </button>
                       <button
                         className="white-text"
+                        id="genre-btn"
                       >
                         GENRE
                       </button>
@@ -735,11 +759,13 @@ ReactWrapper {
                       </label>
                       <button
                         class="white-text"
+                        id="title-btn"
                       >
                         TITLE
                       </button>
                       <button
                         class="white-text"
+                        id="genre-btn"
                       >
                         GENRE
                       </button>
@@ -764,11 +790,13 @@ ReactWrapper {
                         </label>
                         <button
                           className="white-text"
+                          id="title-btn"
                         >
                           TITLE
                         </button>
                         <button
                           className="white-text"
+                          id="genre-btn"
                         >
                           GENRE
                         </button>
@@ -794,11 +822,13 @@ ReactWrapper {
                         </label>
                         <button
                           class="white-text"
+                          id="title-btn"
                         >
                           TITLE
                         </button>
                         <button
                           class="white-text"
+                          id="genre-btn"
                         >
                           GENRE
                         </button>
@@ -814,11 +844,13 @@ ReactWrapper {
                           </label>,
                           <button
                             className="white-text"
+                            id="title-btn"
                           >
                             TITLE
                           </button>,
                           <button
                             className="white-text"
+                            id="genre-btn"
                           >
                             GENRE
                           </button>,
@@ -848,6 +880,7 @@ ReactWrapper {
                         Object {
                           "instance": <button
                             class="white-text"
+                            id="title-btn"
                           >
                             TITLE
                           </button>,
@@ -856,6 +889,7 @@ ReactWrapper {
                           "props": Object {
                             "children": "TITLE",
                             "className": "white-text",
+                            "id": "title-btn",
                           },
                           "ref": null,
                           "rendered": Array [
@@ -866,6 +900,7 @@ ReactWrapper {
                         Object {
                           "instance": <button
                             class="white-text"
+                            id="genre-btn"
                           >
                             GENRE
                           </button>,
@@ -874,6 +909,7 @@ ReactWrapper {
                           "props": Object {
                             "children": "GENRE",
                             "className": "white-text",
+                            "id": "genre-btn",
                           },
                           "ref": null,
                           "rendered": Array [
