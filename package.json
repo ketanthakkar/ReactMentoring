@@ -16,15 +16,6 @@
   "jest": {
     "setupFiles": [
       "./jest/enzyme.js"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "identity-obj-proxy"
-    },
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
     ]
   },
   "repository": {
