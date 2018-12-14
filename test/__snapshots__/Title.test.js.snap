@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should renders Title correctly Snapshot test 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <Title />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {},
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="title-section"
+      >
+        <h4
+          class="netflix-text"
+        >
+          netflixroulette
+        </h4>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <h4
+          className="netflix-text"
+        >
+          netflixroulette
+        </h4>,
+        "className": "title-section",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <h4
+            class="netflix-text"
+          >
+            netflixroulette
+          </h4>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "netflixroulette",
+            "className": "netflix-text",
+          },
+          "ref": null,
+          "rendered": Array [
+            "netflixroulette",
+          ],
+          "type": "h4",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {},
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="title-section"
+        >
+          <h4
+            class="netflix-text"
+          >
+            netflixroulette
+          </h4>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <h4
+            className="netflix-text"
+          >
+            netflixroulette
+          </h4>,
+          "className": "title-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <h4
+              class="netflix-text"
+            >
+              netflixroulette
+            </h4>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "netflixroulette",
+              "className": "netflix-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "netflixroulette",
+            ],
+            "type": "h4",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

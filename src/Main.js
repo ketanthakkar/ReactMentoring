@@ -4,7 +4,6 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import ErrorBoundary from './error/ErrorBoundary';
 import Movie from './components/Movie';
-import PropTypes from 'prop-types';
 
 class Main extends Component {
     constructor(props) {
@@ -29,11 +28,11 @@ class Main extends Component {
                 <Header />  
                 { movieData.data && 
                     <ErrorBoundary>
-                        <Content movies={ movieData } />
+                        <Content movies={ movieData.data } records={ movieData.limit } />
                     </ErrorBoundary> 
                 }
                 <Footer />
-                {/* Movie Detail page <Movie movies={ movieData } /> */}
+                {/* Movie Detail page <Movie movie={ movieData.data } /> */}
             </div>
         );
     }
