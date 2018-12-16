@@ -1,11 +1,11 @@
 describe("Cypress e2e testing", () => {
-    it('should open page', () => {
+    it('should test app', () => {
         cy.visit('http://localhost:4000/');
 
         cy.title().should('include', "ReactJS App");
     });
 
-    it('should has value', () => {
+    it('elements should has some values', () => {
         cy.get('label').should('have.text','SEARCH BY');
 
         cy.get('#title-btn').should('contain', 'TITLE');

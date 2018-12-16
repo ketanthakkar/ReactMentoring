@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should renders Filter correctly Snapshot test 1`] = `
-ReactWrapper {
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Filter
     movieCount={10}
   />,
@@ -13,27 +14,20 @@ ReactWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "movieCount": 10,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": <section
-        class="filter-container"
-      >
+      "children": Array [
         <span
-          class="results"
+          className="results"
         >
           10
            movies found
-        </span>
+        </span>,
         <div
-          class="sort-detail"
+          className="sort-detail"
         >
           <span>
             Sort by
@@ -44,8 +38,92 @@ ReactWrapper {
           <span>
             rating
           </span>
-        </div>
-      </section>,
+        </div>,
+      ],
+      "className": "filter-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            10,
+            " movies found",
+          ],
+          "className": "results",
+        },
+        "ref": null,
+        "rendered": Array [
+          10,
+          " movies found",
+        ],
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              Sort by
+            </span>,
+            <span>
+              release date
+            </span>,
+            <span>
+              rating
+            </span>,
+          ],
+          "className": "sort-detail",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sort by",
+            },
+            "ref": null,
+            "rendered": "Sort by",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "release date",
+            },
+            "ref": null,
+            "rendered": "release date",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "rating",
+            },
+            "ref": null,
+            "rendered": "rating",
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
@@ -75,12 +153,7 @@ ReactWrapper {
       "ref": null,
       "rendered": Array [
         Object {
-          "instance": <span
-            class="results"
-          >
-            10
-             movies found
-          </span>,
+          "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
@@ -92,25 +165,13 @@ ReactWrapper {
           },
           "ref": null,
           "rendered": Array [
-            "10",
+            10,
             " movies found",
           ],
           "type": "span",
         },
         Object {
-          "instance": <div
-            class="sort-detail"
-          >
-            <span>
-              Sort by
-            </span>
-            <span>
-              release date
-            </span>
-            <span>
-              rating
-            </span>
-          </div>,
+          "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
@@ -130,48 +191,36 @@ ReactWrapper {
           "ref": null,
           "rendered": Array [
             Object {
-              "instance": <span>
-                Sort by
-              </span>,
+              "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "Sort by",
               },
               "ref": null,
-              "rendered": Array [
-                "Sort by",
-              ],
+              "rendered": "Sort by",
               "type": "span",
             },
             Object {
-              "instance": <span>
-                release date
-              </span>,
+              "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "release date",
               },
               "ref": null,
-              "rendered": Array [
-                "release date",
-              ],
+              "rendered": "release date",
               "type": "span",
             },
             Object {
-              "instance": <span>
-                rating
-              </span>,
+              "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "rating",
               },
               "ref": null,
-              "rendered": Array [
-                "rating",
-              ],
+              "rendered": "rating",
               "type": "span",
             },
           ],
@@ -179,177 +228,6 @@ ReactWrapper {
         },
       ],
       "type": "section",
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "movieCount": 10,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": <section
-          class="filter-container"
-        >
-          <span
-            class="results"
-          >
-            10
-             movies found
-          </span>
-          <div
-            class="sort-detail"
-          >
-            <span>
-              Sort by
-            </span>
-            <span>
-              release date
-            </span>
-            <span>
-              rating
-            </span>
-          </div>
-        </section>,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <span
-              className="results"
-            >
-              10
-               movies found
-            </span>,
-            <div
-              className="sort-detail"
-            >
-              <span>
-                Sort by
-              </span>
-              <span>
-                release date
-              </span>
-              <span>
-                rating
-              </span>
-            </div>,
-          ],
-          "className": "filter-container",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": <span
-              class="results"
-            >
-              10
-               movies found
-            </span>,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                10,
-                " movies found",
-              ],
-              "className": "results",
-            },
-            "ref": null,
-            "rendered": Array [
-              "10",
-              " movies found",
-            ],
-            "type": "span",
-          },
-          Object {
-            "instance": <div
-              class="sort-detail"
-            >
-              <span>
-                Sort by
-              </span>
-              <span>
-                release date
-              </span>
-              <span>
-                rating
-              </span>
-            </div>,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span>
-                  Sort by
-                </span>,
-                <span>
-                  release date
-                </span>,
-                <span>
-                  rating
-                </span>,
-              ],
-              "className": "sort-detail",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": <span>
-                  Sort by
-                </span>,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Sort by",
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Sort by",
-                ],
-                "type": "span",
-              },
-              Object {
-                "instance": <span>
-                  release date
-                </span>,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "release date",
-                },
-                "ref": null,
-                "rendered": Array [
-                  "release date",
-                ],
-                "type": "span",
-              },
-              Object {
-                "instance": <span>
-                  rating
-                </span>,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "rating",
-                },
-                "ref": null,
-                "rendered": Array [
-                  "rating",
-                ],
-                "type": "span",
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "section",
-      },
-      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

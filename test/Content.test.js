@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import Content from "../src/components/Content";
+import Filter from "../src/components/Filter";
 
 const movieData = [{
     "id": 337167,
@@ -22,13 +23,16 @@ const movieData = [{
 
 describe('should render Content component', () => {
     const tree = shallow(<Content movies={movieData} records={10} />);
-    test('Snapshot test', () => {
+    test('Snapshot test', () => {   
         expect(tree).toMatchSnapshot();
+    });
+
+    test('should render component with records', () => {
+        const count = 10;
+        const tree = mount(<Content movies={movieData} records={count} />);
+        expect(tree.find(Filter).prop('movieCount')).toEqual(count);
     });
 });
 
-test('should render Content component with records', () => {
-    const tree = mount(<Content movies={movieData} records={10} />);
-    expect(tree.prop('records')).toEqual(10);
-});
+
 

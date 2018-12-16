@@ -1,8 +1,8 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Movie from "../src/components/Movie";
 
-describe('should renders Movie correctly', () => {
+describe('should render Movie correctly', () => {
     const movieData = [{
         "id": 337167,
         "title": "Fifty Shades Freed",
@@ -20,7 +20,7 @@ describe('should renders Movie correctly', () => {
         ],
         "runtime": 106
     }]; 
-  const tree = mount(<Movie movie={ movieData }/>);
+  const tree = shallow(<Movie movie={ movieData }/>);
   test('Snapshot test', () => {
     expect(tree).toMatchSnapshot();
   });

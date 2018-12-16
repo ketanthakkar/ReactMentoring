@@ -1,15 +1,17 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Filter from "../src/components/Filter";
 
 describe('should renders Filter correctly', () => {
-  const tree = mount(<Filter movieCount={10}/>);
+  
   test('Snapshot test', () => {
+    const tree = shallow(<Filter movieCount={10}/>);
     expect(tree).toMatchSnapshot();
   });
-});
 
-describe('should render Filter component with movieCount', () => {
-    const tree = mount(<Filter movieCount={10} />);
-    expect(tree.prop('movieCount')).toEqual(10);
+  test('should render component with movieCount', () => {
+    const count = 10;
+    const tree = shallow(<Filter movieCount={count}/>);
+    expect(tree.find('.results').text()).toEqual(`${count} movies found`);
+  });
 });
