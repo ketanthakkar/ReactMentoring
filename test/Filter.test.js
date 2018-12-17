@@ -10,8 +10,7 @@ describe('should renders Filter correctly', () => {
   });
 
   test('should render component with movieCount', () => {
-    const count = 10;
-    const tree = shallow(<Filter movieCount={count}/>);
-    expect(tree.find('.results').text()).toEqual(`${count} movies found`);
+    const tree = shallow(<Filter movieCount={10}/>);
+    expect(tree.find('.results').text()).toEqual(`10 movies found`);
   });
 });
