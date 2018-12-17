@@ -27,7 +27,7 @@ describe('should render Content component', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('should render component with records', () => {
+    test('should render Content component with number of records', () => {
         const count = 10;
         const tree = mount(<Content movies={movieData} records={count} />);
         expect(tree.find(Filter).prop('movieCount')).toEqual(count);
