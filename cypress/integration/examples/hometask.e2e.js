@@ -1,11 +1,11 @@
-describe("Cypress e2e testing", () => {
-    it('should test app', () => {
+describe("netflixroulette end to end testing", () => {
+    it('should open localhost with proper header text', () => {
         cy.visit('http://localhost:4000/');
 
         cy.title().should('include', "ReactJS App");
     });
 
-    it('elements should has some values', () => {
+    it('should display searchby title and genre text with total number of movie found', () => {
         cy.get('label').should('have.text','SEARCH BY');
 
         cy.get('#title-btn').should('contain', 'TITLE');
