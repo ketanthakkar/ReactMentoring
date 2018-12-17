@@ -9,7 +9,7 @@ describe('should renders Filter correctly', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('should render component with movieCount', () => {
+  test('should render Filter component with movieCount', () => {
     const tree = shallow(<Filter movieCount={10}/>);
     expect(tree.find('.results').text()).toEqual(`10 movies found`);
   });
