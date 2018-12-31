@@ -2,10 +2,7 @@ import React from 'react';
 import Filter from './Filter';
 import MovieItem from './MovieItem';
 
-const Content = (props) => {
-    const movies = props.movies.data;
-    const records = props.movies.limit;
-    
+const Content = ({ movies, records }) => {
     if(movies == null || movies.length <= 0) {
         throw new Error('No Movies Found!');
     }
