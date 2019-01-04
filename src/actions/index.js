@@ -9,7 +9,7 @@ export const requestMovies = () => ({
 
 export const receiveMovies = (json) => ({
     type: RECEIVE_MOVIES,
-    movies: json.data.map(movie => movie)
+    movies: json.data
 })
 
 export const filterMovies = () => ({
@@ -23,6 +23,24 @@ export const sortMovies = () => ({
 const fetchMovies = dispatch => {
     dispatch(requestMovies())
     return fetch(`http://react-cdp-api.herokuapp.com/movies`)
+    .then(response => response.json())
+    .then(result => {
+        dispatch(receiveMovies(json))
+    })
+}
+
+const searchMovies = dispatch => {
+    dispatch(filterMovies())
+    return fetch(`http://react-cdp-api.herokuapp.com/movies&search=Fifty&searchBy=title`)
+    .then(response => response.json())
+    .then(result => {
+        dispatch(receiveMovies(json))
+    })
+}
+
+const sortByMovies = dispatch => {
+    dispatch(sortMovies())
+    return fetch(`http://react-cdp-api.herokuapp.com/movies&search=Fifty&searchBy=title`)
     .then(response => response.json())
     .then(result => {
         dispatch(receiveMovies(json))
