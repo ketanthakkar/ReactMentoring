@@ -178,3 +178,11 @@ button {
     width: 70%;
     text-align: justify;
 }
+
+.highlight-color {
+    color: #F65262;
+}
+
+.nonselected-color {
+    background-color: #3c3c3c;
+}
