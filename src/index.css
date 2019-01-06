@@ -82,6 +82,7 @@ body {
 button {
     padding: 5px 10px;
     background-color: #F65262;
+    cursor: pointer;
 }
 
 .filter-container {

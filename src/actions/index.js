@@ -12,37 +12,33 @@ export const receiveMovies = (json) => ({
     movies: json.data
 })
 
-export const filterMovies = () => ({
-    type: FILTER_MOVIES
+export const filterMovies = (searchby) => ({
+    type: FILTER_MOVIES,
+    searchby
 })
 
-export const sortMovies = () => ({
-    type: SORT_MOVIES
+export const sortMovies = (sortby) => ({
+    type: SORT_MOVIES,
+    sortby
 })
 
-const fetchMovies = dispatch => {
+const requestUrl = () => {
+    const url = "http://react-cdp-api.herokuapp.com/movies";
+    const searchStr = `?search=${state.search.search}`;
+    const searchBy = `&searchBy=${state.search.searchby === "title-btn" ? "title" : "genres"}`;
+    const sortBy = `?sortBy=${state.sortby}`
+    const order = "&sortOrder=desc";
+
+    return `${url}${searchStr}${searchBy}${order}`;
+}
+
+const fetchMovies = () => dispatch => {
     dispatch(requestMovies())
-    return fetch(`http://react-cdp-api.herokuapp.com/movies`)
-    .then(response => response.json())
-    .then(result => {
-        dispatch(receiveMovies(json))
-    })
-}
+    const url = requestUrl();
 
-const searchMovies = dispatch => {
-    dispatch(filterMovies())
-    return fetch(`http://react-cdp-api.herokuapp.com/movies&search=Fifty&searchBy=title`)
+    return fetch(url)
     .then(response => response.json())
     .then(result => {
-        dispatch(receiveMovies(json))
-    })
-}
-
-const sortByMovies = dispatch => {
-    dispatch(sortMovies())
-    return fetch(`http://react-cdp-api.herokuapp.com/movies&search=Fifty&searchBy=title`)
-    .then(response => response.json())
-    .then(result => {
-        dispatch(receiveMovies(json))
+        dispatch(receiveMovies(result))
     })
 }

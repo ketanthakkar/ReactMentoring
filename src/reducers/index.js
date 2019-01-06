@@ -18,4 +18,30 @@ const moviesReducer = (state = {
     }
 }
 
-export default moviesReducer
+const searchReducer = () => {
+    switch(action.type) {
+        case SORT_MOVIES:
+            return { 
+                ...state,
+                sortby = action.sortby
+             }
+        default:
+            return state;     
+    }
+}
+
+const sortByReducer = () => {
+    switch(action.type) {
+        case FILTER_MOVIES:
+            return { 
+                ...state,
+                searchStr = action.searchStr
+             }
+        default:
+            return state;     
+    }
+}
+
+export default combineReducers({
+    moviesReducer, searchReducer, sortByReducer
+});
