@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { fetchMovies, filterMovies } from '../actions/index';
+import { fetchMovies, filterMovies, filterMoviesBy } from '../actions/index';
 
 const Search = () => {
 
     handleSearchClick = (event) => {
-        alert("dsds");
-        this.props.searchBy(event.target.id);
+       const filterBy = event.target.id === "genre-btn" ? "genre" : "title"
+       this.props.filterMoviesBy(filterBy);
     }
 
     handleChange = (event) => {
