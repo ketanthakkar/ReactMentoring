@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { fetchMovies } from './actions/index';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
@@ -9,18 +6,29 @@ import ErrorBoundary from './error/ErrorBoundary';
 import Movie from './components/Movie';
 
 class Main extends Component {
-        
-    async componentDidMount() {
-        await this.props.fetchMovies();
+    constructor(props) {
+        super(props);
+
+        this.state = { 
+            movieData: [],
+        }
+    }
+    
+    componentDidMount() {
+        fetch(`http://react-cdp-api.herokuapp.com/movies`)
+        .then(response => response.json())
+        .then(result => this.setState({ movieData: result }));
     }
 
-    render() {        
+    render() {
+        const {movieData} = this.state;
+        
         return ( 
             <div className="main">
                 <Header />  
-                { this.props.movies.length > 0 && 
+                { movieData.data && 
                     <ErrorBoundary>
-                        <Content movies={ this.props.movies } records={ this.props.movies.length } />
+                        <Content movies={ movieData.data } records={ movieData.limit } />
                     </ErrorBoundary> 
                 }
                 <Footer />
@@ -30,19 +38,4 @@ class Main extends Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({
-      fetchMovies
-    }, dispatch);
-  }
-  
-  const mapStateToProps = (state) => {
-    return {
-      movies: state.movies.movieData,
-      searchby: state.search.searchby,
-      sortby: state.sortby
-    };
-  };
-  
-
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default Main;
