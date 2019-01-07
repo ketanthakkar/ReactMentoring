@@ -34,3 +34,14 @@ describe('Sort reducers', () => {
     });
 
 });
+
+describe('movie reducers', () => {
+
+    it('should handle RECEIVE_MOVIES', () => {
+        const mock = {
+          type: actionsTypes.REQUEST_MOVIES, 
+        };
+        
+        expect(reducerTypes.movies({}, mock)).toStrictEqual({});
+      });
+});
