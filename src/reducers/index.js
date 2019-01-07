@@ -1,7 +1,7 @@
 import { REQUEST_MOVIES, RECEIVE_MOVIES, FILTER_MOVIES, FILTER_MOVIES_BY, SORT_MOVIES } from '../actions';
 import { combineReducers } from 'redux';
 
-const movies = (state = {movieData: []}, action) => {
+export const movies = (state = {movieData: []}, action) => {
 
     switch(action.type) {
         case REQUEST_MOVIES:
@@ -18,7 +18,7 @@ const movies = (state = {movieData: []}, action) => {
     }
 }
 
-const search = (state = {searchStr: "", searchby: "title"}, action) => {
+export const search = (state = {searchStr: "", searchby: "title"}, action) => {
     switch(action.type) {
         case FILTER_MOVIES:
             return { 
@@ -37,14 +37,14 @@ const search = (state = {searchStr: "", searchby: "title"}, action) => {
     }
 }
 
-const sortBy = (state = {sortby: "release_date"}, action) => {
+export const sortBy = (state = {sortby: "release_date"}, action) => {
     switch(action.type) {
         case SORT_MOVIES:
             return { 
                 ...state,
                 sortby: action.sortby
              }
-             
+
         default:
             return state;     
     }
